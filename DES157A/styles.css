@@ -1,0 +1,57 @@
+body {
+    background-color: #e6ccb2;
+    margin-right: 15%;
+    margin-left: 5%;
+}
+
+#container {
+    position: relative;
+    width: 1000px;
+    margin: auto;
+    min-width: 900px;
+}
+
+header {
+    background-color: black;
+    padding: 20px;
+    /* static gif in background */
+}
+
+header h1,
+h2 {
+    color: white;
+}
+
+#block {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 150px;
+    background-color: #7f5539;
+}
+
+main {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+main h2 {
+    color: black;
+}
+
+section {
+    border: 1px black solid;
+    padding: 10px;
+}
+
+footer {
+    display: flex;
+    /* background-color: #7f5539; */
+}
+
+footer a {
+    padding: 20px;
+    color: white;
+}
