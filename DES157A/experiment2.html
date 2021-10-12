@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Experimentation-Functions & DOM</title>
+</head>
+<body>
+    <!-- Using prompt() ask users to input their favorite color from a list of colors. Then change the background of the page to that color. -->
+
+    <style>
+        body {
+            background-color: white;
+        }
+    </style>
+
+    <h1>pick a color !</h1>
+    
+
+    <script>
+        // color options for user to pick
+        var colors = ["red", "yellow", "blue","green", "purple", "orange"];
+
+        // user picks color
+        var pickColor = prompt("pick a primary or secondary color", "");
+
+        // if input color matches one of colors in array, then the background changes to that color
+
+        console.log(pickColor);
+        for (var i=0; i<colors.length; i++){
+            if (pickColor === colors[i]){
+                document.querySelector("body").style.backgroundColor=colors[i];
+
+
+                document.querySelector("h1").innerHTML="good job!";
+            }
+        }
+
+
+        if ( pickColor != "red" ||  pickColor != "yellow"  ||pickColor != "blue" || pickColor != "green" || pickColor != "purple" || pickColor != "orange" ) {
+            var pickColor = prompt("pick red, yellow, blue, green, purple, or orange and try again", ""); 
+            document.querySelector("body").style.backgroundColor=white;     
+        }
+
+
+    </script>
+</body>
+</html>
