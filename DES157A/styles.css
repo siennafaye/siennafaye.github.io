@@ -240,6 +240,7 @@ main h2 {
     font-family: forma-djr-text, sans-serif;
     font-weight: 700;
     font-size: 18pt;
+    line-height: 0.75em;
 }
 main ul {
     padding: 10px;
@@ -259,10 +260,16 @@ section {
     background: white;
     box-shadow: -8px 10px 0px -1px #000000;
     padding: 20px;
+    margin: 10px;
+    padding-top: 0px;
     border: 1px solid black;
 }
 /* footer */
 footer {
+    transform: translate(0, -625px);
+    z-index: 3;
+
+    position: sticky;
     background: black;
     display: flex;
     justify-content: space-evenly;
