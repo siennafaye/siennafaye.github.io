@@ -1,0 +1,143 @@
+body {
+    background-color:#232323;
+    display: grid;
+    /* divide page into quadrants */
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
+}
+#overlay-background {
+    position: fixed;
+    z-index: 2;
+    /* changes on submit click */
+    display: none;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+}
+#overlay {
+    background-color: white;
+    position: absolute;
+    z-index: 3;
+    /* changes on submit click */
+    display: none;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    height: 75%;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+}
+#overlay button {
+    border: 0.5px solid #c4c4c4;
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    background-color: white;
+}
+header img {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top : -100px;
+    left: 0;
+    bottom: 0;
+}
+header {
+    /* position */
+    margin-top: 50px;
+    margin-left: 50px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+h2 {
+    width: 350px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    position: relative;
+    margin-top: 375px;
+    font-size: 1.5em;
+    line-height: 1em;
+}
+/* decorative cards */
+main img {
+    position: absolute;
+    z-index: -2;
+    margin-top: -100px;
+    left: 0;
+    width: 1000px;
+    height: 1000px;
+}
+/* to hold form */
+#largecard {
+    /* position */
+    position: absolute;
+    top: 160px;
+    left: 800px;
+    z-index: -1;
+    grid-row: 1;
+    grid-column: 1;
+
+    /* appearance */
+    background-color: white;
+    width: 600px;
+    height: 760px;
+    border-radius: 20px;
+    box-shadow: -7px 12px 27px -5px #000000;
+}
+form {
+    /* position */
+    position: absolute;
+    top: 250px;
+    left: 875px;
+    display: block;
+
+    /* appearance */
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+}
+form div {
+    padding-bottom: 30px;
+}
+form input[type="text"]{
+    width: 100%;
+}
+/* submit button */
+input[type="submit"] {
+    margin-top: 75px;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #232323;
+    background-color: #232323;
+    color: white;
+    padding: 10px;
+}
+input[type="submit"]:hover {
+    margin-top: 75px;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #340143;
+    background-color: #340143;
+    color: white;
+    padding: 10px;
+
+    box-shadow: inset -1px 3px 8px 5px #340143, 2px 5px 16px 0px #260030, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+/* reading text styling */
+#madlib {
+    margin: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+#madlib a {
+    font-weight: bold;
+    color: #340143;
+}
+#madlib h3 {
+    font-family: epicursive, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.75em;
+}

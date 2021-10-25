@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zys7omb.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zys7omb.css">
+
+    <script src="script.js" defer></script>
+    <title>Build Your Own Tarot Reading</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/MadLibs-01.png" alt="Build Your Own Tarot Reading">
+        <h2>Fill in the blanks to generate a tarot reading from your virtual mystic!</h2>
+    </header>
+
+    <main>
+        <!-- decorative cards in the bottom left corner -->
+        <img src="images/MadLibs-02.png" alt="decorative cards">
+
+        <div id="largecard"></div>
+        <form id="myForm">
+            <!-- name -->
+            <label for="fname">Enter your name</label>
+            <input type="text" id="fname" name="fname"><br><br>
+             <!-- adjective -->
+            <div><label for="adjective">Provide an adjective</label><br>
+            <input type="text" id="adjective" required></div>
+            <!-- <input type="submit" value="send"><br> -->
+
+             <!-- radio button for desire -->
+            <!-- <div><label for="desire">What do you desire?</label><br>
+
+            <input type="radio" name="desire" class="desire" value="love" required>
+            <label for="love">Love</label><br>
+            
+            <input type="radio" name="desire" class="desire" value="money" required>
+            <label for="money">Money</label><br>
+
+            <input type="radio" name="desire" class="desire" value="truth" required>
+            <label for="truth">Truth</label><br>
+
+            <input type="radio" name="desire" class="desire" value="inspiration" required>
+            <label for="inspiration">Inspiration</label></div> -->
+
+            <!-- dropdown for feeling -->
+            <div><label for="desire">Which of these do you desire?<br></label>
+                <select id="desire" name="desire">
+                    <option value="love">Love</option>
+                    <option value="money">Money</option>
+                    <option value="truth">Truth</option>
+                    <option value="Inspiration">Inspiration</option>
+                </select></div>
+
+            <!-- dropdown for feeling -->
+            <div><label for="feeling">How have you been feeling?<br></label>
+            <select id="feeling" name="feeling">
+                <option value="excited">Excited</option>
+                <option value="content">Content</option>
+                <option value="anxious">Anxious</option>
+                <option value="sad">Sad</option>
+            </select></div>
+
+            <input type="submit" name="generate" value="Generate my reading!">
+        </form>
+    </main>
+    <!-- overlay scrim -->
+    <div id="overlay-background"></div>
+    <!-- overlay -->
+        <section id="overlay">
+            <button class="close">close</button>
+            <article id="madlib">
+            </article>
+        </section>
+    <footer>
+
+    </footer>
+</body>
+</html>
