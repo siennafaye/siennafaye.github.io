@@ -87,14 +87,19 @@
 })();
 (function() {
     // closes overlay
-    document.getElementById('.close', function(event){
+    document.getElementById('.close', function(closeFunction){
 
-        event.preventDefault();
+        function closeFunction() {
+            console.log("close pressed");
 
-        console.log("close pressed");
+            document.getElementById("overlay-background").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+        }
 
-        document.getElementById("overlay-background").style.display = "none";
-        document.getElementById("overlay").style.display = "none";
+        // console.log("close pressed");
+
+        // document.getElementById("overlay-background").style.display = "none";
+        // document.getElementById("overlay").style.display = "none";
 
     });
 
