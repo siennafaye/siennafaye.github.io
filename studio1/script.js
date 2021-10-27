@@ -84,24 +84,18 @@
         madlib.innerHTML = myText;
     });
 
-})();
-(function() {
-    // closes overlay
-    document.getElementById('.close', function(closeFunction){
+    // close overlay
+    const button = document.getElementById(".close");
 
-        function closeFunction() {
-            console.log("close pressed");
+    button.addEventListener("click", closeFunction);
 
-            document.getElementById("overlay-background").style.display = "none";
-            document.getElementById("overlay").style.display = "none";
-        }
+    function closeFunction() {
 
-        // console.log("close pressed");
+        console.log("close pressed");
 
-        // document.getElementById("overlay-background").style.display = "none";
-        // document.getElementById("overlay").style.display = "none";
-
-    });
+        document.getElementById("overlay-background").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+    }
 
     document.addEventListener('keydown', function(event){
 
@@ -111,4 +105,5 @@
             document.getElementById("overlay").style.display = "none";
         }
     });
+
 })();
