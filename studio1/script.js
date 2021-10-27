@@ -83,13 +83,14 @@
         }
         madlib.innerHTML = myText;
     });
+})();
 
-    // close overlay
-    const button = document.getElementById(".close");
+// close overlay
+const button = document.getElementById(".close");
 
-    button.addEventListener("click", closeFunction);
+button.addEventListener("click", closeFunction);
 
-    function closeFunction() {
+function closeFunction() {
 
         console.log("close pressed");
 
@@ -105,5 +106,3 @@
             document.getElementById("overlay").style.display = "none";
         }
     });
-
-})();
