@@ -45,6 +45,9 @@ article p {
     line-height: 1.75em;
     width: 700px;
 }
+figcaption {
+    padding-bottom: 10px;
+}
 /* footer */
 footer {
     display: flex;
@@ -64,7 +67,6 @@ footer a {
     text-decoration: none;
     color: black;
 }
-
 footer a:hover {
     background-color: black;
     border: 1px solid white;
