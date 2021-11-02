@@ -86,6 +86,29 @@ main img {
     border-radius: 20px;
     box-shadow: -7px 12px 27px -5px #000000;
 }
+
+footer {
+    z-index: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    position: absolute;
+    right: 10px;
+    bottom: -150px;
+}
+footer a {
+    font-family: 'Courier New', Courier, monospace;
+    color:#232323;
+    border-radius: 2px;
+    /* border: 1px solid #232323; */
+    /* background-color: #232323; */
+    padding: 20px;
+}
+footer a:hover {
+    color: #340143
+}
+
 form {
     /* position */
     position: absolute;
