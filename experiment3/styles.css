@@ -1,0 +1,67 @@
+#container {
+    width: 375px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+#container div {
+    position: absolute;
+    border: 1px solid red;
+}
+#container img {
+    display: block;
+    position: absolute;
+    transition: all 3s ease;
+}
+/* bush */
+#topleft {
+    width: 375px;
+    height: 100px;
+    top: 0;
+    left: 0;
+}
+/* leaf */
+#bottomleft {
+    width: 100px;
+    height: 150px;
+    bottom: 50px;
+    left: 60px;
+}
+/* sidewalk */
+#center {
+    width: 100px;
+    height: 100px;
+    left: 75%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+}
+.start {
+    border: 1px solid blue;
+    width: 375px;
+    height: 500px;
+    left: 0;
+    top: 0;
+}
+/* zoom */
+.topleft,
+.bottomleft,
+.center {
+    width: 500px;
+}
+
+.topleft {
+    top: 0;
+    left: 0;
+}
+
+.bottomleft {
+    left: 0;
+    top: -10px;
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
