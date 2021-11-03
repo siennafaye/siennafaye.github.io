@@ -86,7 +86,7 @@
 })();
 
 // close overlay
-const button = document.getElementById(".close");
+const button = document.getElementById("close");
 
 button.addEventListener("click", closeFunction);
 
