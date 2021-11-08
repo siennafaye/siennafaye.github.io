@@ -30,6 +30,7 @@ article {
 }
 section {
 	height: 100vh;
+    padding-right: 20px;
 }
 
 figure {
@@ -47,9 +48,13 @@ figure img {
 	transition: all 1.5s ease;
 }
 
+section {
+    transition: all 0.5s ease;
+}
+
 /* introduction */
 .sect1{
-	width: 100vh; /*147% the height of the image is the width ratio*/
+	width: 100vh; 
 	top:0;
 }
 
@@ -63,6 +68,7 @@ figure img {
 .sect2 {
     top: 0;
     left: 0;
+    background-color: #301934;
 }
 
 /* sidewalk */
@@ -79,6 +85,6 @@ figure img {
 
 /* overall */
 .sect5 {
-	width: 100vh; /*147% the height of the image is the width ratio*/
+	width: 100vh; 
 	top:0;
 }
