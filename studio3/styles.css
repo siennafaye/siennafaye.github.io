@@ -1,0 +1,75 @@
+body {
+    font-family: 'Gothic A1', sans-serif;
+    color: #2E3742;
+    padding: 20px;
+}
+h1 {
+    font-size: 3em;
+    line-height: 0.2em;
+}
+h2 {
+    font-size: 2em;
+}
+p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+#close p {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-top: 0;
+    font-size: 2em;
+}
+#heading {
+    transform: translate(50%,50%);
+    z-index: 1;
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 10px rgba(163,174,189,0.35);
+
+    max-width: 50%;
+    text-align: left;
+}
+.hidden {
+    display: none;
+}
+#profiles {
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#gamecontrol {
+    display: none;
+    flex-direction: column;
+    max-width: 30%;
+    margin-bottom: 20px;
+}
+button {
+    padding: 10px;
+    border: solid 1px #F2F2F2;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 0px 15px 10px #F2F2F2;
+}
+button:hover {
+    box-shadow: 0px 0px 15px 10px rgba(163,174,189,0.35);
+}
+footer {
+    margin-top: 55%;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+    padding: 20px;
+}
+footer a {
+    color: #2E3742;
+    text-decoration: none;
+}
+/* img {
+    width: 200px;
+    height: 300px;
+} */
