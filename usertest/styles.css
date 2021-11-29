@@ -1,0 +1,270 @@
+body {
+    width: 1366px;
+    height: 768px;
+    display: grid;
+    /* divide page into quadrants */
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
+}
+body {
+    background: linear-gradient(-45deg, #232323, #260030, #1b1b1b, #340143);
+	background-size: 500% 500%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+/* change so this executes when submit button is clicked */
+#fade {
+    position: fixed;
+    z-index: 2;
+    
+    display: none;
+    background: #232323;
+    width: 100%;
+    height: 100%;
+
+    transition: all 2s ease-in;
+}
+/* back of cards */
+#cards {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    z-index: 3;
+    margin-left: -15%;
+}
+#cards img {
+    width: 800px;
+    height: 800px;
+    grid-column: 2;
+    transition: all 2s ease-in;
+}
+.button {
+    display: none;
+
+    position: absolute;
+    bottom: 0;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 25%;
+    height: 10%;
+    color: white;
+    background-color: #232323;
+}
+.button:hover {
+    border: 1px solid #340143;
+    border-radius: 5px;
+    width: 25%;
+    height: 10%;
+    color: white;
+    background-color: #340143;
+    box-shadow: inset -1px 3px 8px 5px #340143, 2px 5px 16px 0px #260030, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+/* overlay */
+#overlay-background {
+    position: fixed;
+    z-index: 2;
+    /* changes on submit click */
+    display: none;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+}
+#overlay {
+    background-color: white;
+    position: absolute;
+    z-index: 3;
+    /* changes on submit click */
+    display: none;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    height: 75%;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+}
+#overlay button {
+    border: 0.5px solid #c4c4c4;
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    background-color: white;
+}
+header img {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top : -200px;
+    left: 0;
+    bottom: 0;
+}
+header {
+    /* position */
+    margin-left: 50px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+h2 {
+    width: 350px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    position: relative;
+    margin-top: 375px;
+    font-size: 1.5em;
+    line-height: 1em;
+}
+/* decorative cards */
+main img {
+    position: absolute;
+    z-index: -2;
+    left: 0;
+    bottom: -100px;
+    width: 1000px;
+    height: 1000px;
+}
+/* to hold form */
+#largecard {
+    /* position */
+    position: absolute;
+    bottom: -100px;
+    left: 800px;
+    z-index: -1;
+    grid-row: 1;
+    grid-column: 1;
+
+    /* appearance */
+    background-color: white;
+    width: 600px;
+    height: 760px;
+    border-radius: 20px;
+    box-shadow: -7px 12px 27px -5px #000000;
+}
+
+footer {
+    z-index: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    position: absolute;
+    right: 10px;
+    bottom: -150px;
+}
+footer a {
+    font-family: 'Courier New', Courier, monospace;
+    color:#260030;
+    border-radius: 2px;
+    /* border: 1px solid #232323; */
+    /* background-color: #232323; */
+    padding: 20px;
+}
+footer a:hover {
+    color: #340143
+}
+
+form {
+    /* position */
+    position: absolute;
+    top: 200px;
+    left: 875px;
+    display: block;
+
+    /* appearance */
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+}
+form div {
+    padding-bottom: 30px;
+}
+form input[type="text"]{
+    width: 100%;
+}
+/* submit button */
+input[type="submit"] {
+    margin-top: 75px;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #232323;
+    background-color: #232323;
+    color: white;
+    padding: 10px;
+}
+input[type="submit"]:hover {
+    margin-top: 75px;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #340143;
+    background-color: #340143;
+    color: white;
+    padding: 10px;
+
+    box-shadow: inset -1px 3px 8px 5px #340143, 2px 5px 16px 0px #260030, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+/* reading text styling */
+#madlib {
+    margin: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+#madlib a {
+    font-weight: bold;
+    color: #340143;
+}
+#madlib h3 {
+    font-family: epicursive, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.75em;
+}
+
+/* screen 2, cards animation */
+/* #cards {
+    position: absolute;
+    background-color: #232323;
+    width: 100%;
+    height: 100%;
+}
+.cards {
+    margin: 20px;
+
+    background-color: #c4c4c4;
+    border-radius: 20px;
+    width: 800px;
+    height: 1000px;
+} */
+
+    /* animation-name: enterCards;
+    animation-duration: 800ms;
+    animation-delay: 2s;
+
+    transition: all 1s ease-out;
+}
+@keyframes enterCards-01 {
+    0% {
+        transform:translateY(1500px);
+    }
+    100% {
+        transform: translateY(100px);
+    }
+} */
+
