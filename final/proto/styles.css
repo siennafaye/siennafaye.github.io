@@ -13,6 +13,7 @@ body {
 	height: 100vh;
 }
 
+/* homepage gradient effect */
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -24,9 +25,12 @@ body {
 		background-position: 0% 50%;
 	}
 }
-/* change so this executes when submit button is clicked */
+
+/* transition to screen 2 */
 #fade {
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 2;
     
     display: none;
@@ -36,27 +40,46 @@ body {
 
     transition: all 2s ease-in;
 }
-/* back of cards */
-#cards {
-    display: none;
-    flex-direction: row;
-    justify-content: space-between;
 
+/* screen 2: back of cards */
+#cards h2 {
+    position: absolute;
+    display: block;
+    margin-top: -5%;
+
+    width: 100%;
 
     z-index: 3;
-    margin-left: -15%;
 }
+#cards {
+    position: absolute;
+
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    transform: translate(25%,25%);
+    margin-top: -5%;
+    margin-left: -10%;
+
+    width: 1366px;
+    height: 768px;
+
+    z-index: 3;
+}
+/* sizing cards */
 #cards img {
-    width: 800px;
-    height: 800px;
-    grid-column: 2;
-    transition: all 2s ease-in;
+    width: 50%;
+}
+#cards img:hover {
+    cursor: pointer;
 }
 .button {
     display: none;
 
     position: absolute;
-    bottom: 0;
+    bottom: 18%;
+    left: 25%;
 
     font-family: 'Courier New', Courier, monospace;
     font-size: 1em;
@@ -69,6 +92,8 @@ body {
     background-color: #232323;
 }
 .button:hover {
+    cursor: pointer;
+
     border: 1px solid #340143;
     border-radius: 5px;
     width: 25%;
@@ -77,38 +102,53 @@ body {
     background-color: #340143;
     box-shadow: inset -1px 3px 8px 5px #340143, 2px 5px 16px 0px #260030, 5px 5px 15px 5px rgba(0,0,0,0);
 }
+
 /* overlay */
 #overlay-background {
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     /* changes on submit click */
     display: none;
     background: rgba(0,0,0,0.5);
     width: 100%;
     height: 100%;
+
+    transition: all 2s ease-in;
 }
 #overlay {
     background-color: white;
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     /* changes on submit click */
     display: none;
+
     top: 50%;
     left: 50%;
-    width: 75%;
-    height: 75%;
+
+    width: 80%;
+    height: 80%;
+
     border-radius: 20px;
     transform: translate(-50%, -50%);
 }
 #overlay button {
-    border: 0.5px solid #c4c4c4;
-    padding: 10px;
-    margin-top: 15px;
-    margin-left: 15px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5em;
     background-color: white;
+    color: #232323;
+    border: 0.5px solid #c4c4c4;
+    padding: 5px;
+
+    margin-top: 20px;
+    margin-left: 20px;
+    
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
 }
+#overlay button:hover {
+    cursor: pointer;
+    border: 0.5px solid #232323;
+}
+
+/* header text styling with img */
 header img {
     width: 800px;
     height: 800px;
@@ -116,6 +156,22 @@ header img {
     top : -200px;
     left: 0;
     bottom: 0;
+
+    animation: flicker 2s ease-in-out infinite;
+}
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.75;
+    }
+    75% {
+        opacity: 0.85;
+    }
+    100% {
+       opacity: 1; 
+    }
 }
 header {
     /* position */
@@ -123,6 +179,8 @@ header {
     grid-column-start: 1;
     grid-column-end: 3;
 }
+
+/* instructions */
 h2 {
     width: 350px;
     font-family: 'Courier New', Courier, monospace;
@@ -132,7 +190,8 @@ h2 {
     font-size: 1.5em;
     line-height: 1em;
 }
-/* decorative cards */
+
+/* decorative cards on homepage */
 main img {
     position: absolute;
     z-index: -2;
@@ -141,6 +200,7 @@ main img {
     width: 1000px;
     height: 1000px;
 }
+
 /* to hold form */
 #largecard {
     /* position */
@@ -159,6 +219,7 @@ main img {
     box-shadow: -7px 12px 27px -5px #000000;
 }
 
+/* footer styling */
 footer {
     z-index: 0;
     position: relative;
@@ -178,9 +239,12 @@ footer a {
     padding: 20px;
 }
 footer a:hover {
+    cursor: pointer;
+
     color: #340143
 }
 
+/* form styling */
 form {
     /* position */
     position: absolute;
@@ -198,6 +262,7 @@ form div {
 form input[type="text"]{
     width: 100%;
 }
+
 /* submit button */
 input[type="submit"] {
     margin-top: 75px;
@@ -209,6 +274,8 @@ input[type="submit"] {
     padding: 10px;
 }
 input[type="submit"]:hover {
+    cursor: pointer;
+
     margin-top: 75px;
     width: 100%;
     border-radius: 2px;
@@ -221,7 +288,8 @@ input[type="submit"]:hover {
 }
 /* reading text styling */
 #madlib {
-    margin: 30px;
+    margin: 40px;
+    margin-top: 20px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.5em;
     line-height: 1.5em;
@@ -231,40 +299,10 @@ input[type="submit"]:hover {
     color: #340143;
 }
 #madlib h3 {
+    margin-top: 5px;
     font-family: epicursive, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 1.75em;
 }
-
-/* screen 2, cards animation */
-/* #cards {
-    position: absolute;
-    background-color: #232323;
-    width: 100%;
-    height: 100%;
-}
-.cards {
-    margin: 20px;
-
-    background-color: #c4c4c4;
-    border-radius: 20px;
-    width: 800px;
-    height: 1000px;
-} */
-
-    /* animation-name: enterCards;
-    animation-duration: 800ms;
-    animation-delay: 2s;
-
-    transition: all 1s ease-out;
-}
-@keyframes enterCards-01 {
-    0% {
-        transform:translateY(1500px);
-    }
-    100% {
-        transform: translateY(100px);
-    }
-} */
 
