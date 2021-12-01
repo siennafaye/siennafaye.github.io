@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zys7omb.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zys7omb.css">
+
+    <script src="script.js" defer></script>
+    <title>Build Your Own Tarot Reading</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/MadLibs-01.png" alt="Build Your Own Tarot Reading">
+        <h2>Fill in the blanks to generate a tarot reading from your virtual mystic!</h2>
+    </header>
+
+    <main>
+        <!-- decorative cards in the bottom left corner -->
+        <img src="images/MadLibs-02.png" alt="decorative cards">
+
+        <div id="largecard"></div>
+        <form id="myForm">
+            <!-- name -->
+            <label for="fname">Enter your name</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            
+             <!-- adjective -->
+            <div><label for="adjective">Provide an adjective</label><br>
+            <input type="text" id="adjective" required></div>
+
+            <!-- dropdown for feeling -->
+            <div><label for="desire">Which of these do you desire?<br></label>
+                <select id="desire" name="desire">
+                    <option value="love">Love</option>
+                    <option value="money">Money</option>
+                    <option value="truth">Truth</option>
+                    <option value="inspiration">Inspiration</option>
+                </select></div>
+
+            <!-- dropdown for feeling -->
+            <div><label for="feeling">How have you been feeling?<br></label>
+            <select id="feeling" name="feeling">
+                <option value="excited">Excited</option>
+                <option value="content">Content</option>
+                <option value="anxious">Anxious</option>
+                <option value="sad">Sad</option>
+            </select></div>
+
+            <input type="submit" name="generate" value="Generate my reading!">
+        </form>
+    </main>
+
+    <!-- fade to black effect -->
+    <div id="fade"></div>
+
+    <!-- cards -->
+    <div id="cards">
+        <h2>Click each card to reveal what your virtual mystic has pulled for you.</h2>
+
+        <button id="display-reading" class="button">What Do These Cards Mean?</button>
+
+        <button id="restart" class="button">Want Another Reading?</button>
+
+        <div id="card1">
+            <img src="images/card-back-01.png" alt="back of tarot card">
+        </div>
+        <div id="card2">
+            <img src="images/card-back-01.png" alt="back of tarot card">
+        </div>
+    </div>
+    
+    <!-- overlay scrim -->
+    <div id="overlay-background"></div>
+
+    <!-- overlay -->
+        <section id="overlay">
+            <button id="close">close</button>
+            <article id="madlib">
+            </article>
+        </section>
+    <footer>
+        <p><a href="https://validator.w3.org/check?uri=https://siennafaye.github.io/des157">Valid HTML 5</a></p>
+            <p><a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a></p>
+    </footer>
+</body>
+</html>
